@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails ToDoListDatabase: development" uuid="293b49c8-99ef-49a3-98b7-4585865229fa">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails ToDoListDatabase: test" uuid="db7fdbbe-8d1f-49d2-ab57-afe0ddbcff59">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails ToDoListDatabase: production" uuid="77807b26-2bfa-4c5d-ade6-cd7e7a529f98">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
