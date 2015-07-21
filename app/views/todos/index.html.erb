@@ -1,6 +1,6 @@
 <%- model_class = Todo -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1><%=@title%></h1>
 </div>
 <table class="table table-striped">
   <thead>
@@ -20,7 +20,7 @@
         <td><%= todo.description %></td>
         <td><%= todo.is_completed %></td>
         <td><%= todo.target_date %></td>
-        <td><%=l todo.created_at %></td>
+        <td><%= todo.created_at.to_datetime.strftime("%Y-%m-%d") %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_todo_path(todo), :class => 'btn btn-default btn-xs' %>
@@ -38,3 +38,8 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_todo_path,
             :class => 'btn btn-primary' %>
+
+<div>
+  <br>
+  <%=@server_details%>
+</div>

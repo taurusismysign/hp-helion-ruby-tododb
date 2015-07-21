@@ -20,26 +20,22 @@
     <div class="controls">
       <%= f.text_field :description, :class => 'form-control' %>
     </div>
-    <%= error_span(@todo[:description]) %>
   </div>
   <div class="control-group">
     <%= f.label :is_completed, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :is_completed, :class => 'form-control' %>
+      <%= f.check_box :is_completed %>
     </div>
-    <%= error_span(@todo[:is_completed]) %>
   </div>
   <div class="control-group">
     <%= f.label :target_date, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :target_date, :class => 'form-control' %>
     </div>
-    <%= error_span(@todo[:target_date]) %>
   </div>
 
-
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            todos_path, :class => 'btn btn-default' %>
-
+   <br>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  todos_path, :class => 'btn btn-default' %>
 <% end %>

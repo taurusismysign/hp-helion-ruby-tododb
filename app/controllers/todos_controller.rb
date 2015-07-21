@@ -5,6 +5,14 @@ class TodosController < ApplicationController
   # GET /todos.json
   def index
     @todos = Todo.all
+    @title = ENV['TITLE'] || "TODO Application (Dev)"
+
+    #if in the query string you pass debug=true (or any value for debug, it will print the VCAP_APPLICATION)
+    #mainly used to see multiple instance working and which particular instance the page got served.
+    if params[:debug]
+      @server_details = "Server details not available"
+      @server_details = JSON.parse(ENV['VCAP_APPLICATION']) if ENV['VCAP_APPLICATION'].present?
+    end
   end
 
   # GET /todos/1
