@@ -2,7 +2,7 @@
 applications:
 - name: hp-helion-ruby-tododb
   memory: 512M
-  instances: 2
+  instances: 1
   command: bundle exec rails s -p $PORT
   services:
     ${name}-db: mysql
